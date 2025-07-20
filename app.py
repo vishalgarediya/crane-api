@@ -1,4 +1,13 @@
 from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# ✅ Home route to confirm API is working
+@app.route('/')
+def home():
+    return "✅ Mohammad Crane Service API is Live!"
+
+from flask import Flask, request, jsonify
 import sqlite3
 
 app = Flask(__name__)
