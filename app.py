@@ -1,17 +1,13 @@
 from flask import Flask, request, jsonify
+import sqlite3
 
 app = Flask(__name__)
+DB = "cloud_data.db"
 
 # ✅ Home route to confirm API is working
 @app.route('/')
 def home():
     return "✅ Mohammad Crane Service API is Live!"
-
-from flask import Flask, request, jsonify
-import sqlite3
-
-app = Flask(__name__)
-DB = "cloud_data.db"
 
 def connect():
     return sqlite3.connect(DB)
